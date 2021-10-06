@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using SampleApi.Model;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ namespace SampleApi.Controllers
 {
     public class SamplesController : BaseApiController
     {
+        [EnableCors("MyPolicy")]
         [HttpGet]
         public ActionResult<IEnumerable<Sample>> GetSamples()
         {
