@@ -45,8 +45,7 @@ namespace SampleApi
             app.UseCors(x => x.AllowAnyHeader()
             .AllowAnyOrigin()
             .AllowAnyMethod()
-            .AllowCredentials()
-            .WithOrigins("*"));
+            .AllowCredentials());
 
             app.UseDefaultFiles();
 
